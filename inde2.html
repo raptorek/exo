@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Sklep Neonowy</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Arial', sans-serif;
+      background: linear-gradient(135deg, #000000, #1a1a1a, #000000);
+      background-size: 400% 400%;
+      animation: gradientBG 15s ease infinite, fadeInBody 1s ease forwards;
+      color: #fff;
+      overflow-x: hidden;
+      opacity: 0;
+    }
+
+    @keyframes gradientBG {
+      0% {background-position: 0% 50%;}
+      50% {background-position: 100% 50%;}
+      100% {background-position: 0% 50%;}
+    }
+
+    @keyframes fadeInBody {
+      to { opacity: 1; }
+    }
+
+    .logo-container {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 40px 0 20px 0;
+      animation: fadeIn 1.2s ease-out forwards;
+    }
+
+    .logo {
+      width: 200px;
+      max-width: 90%;
+      filter: drop-shadow(0 0 15px #ff1a1a);
+    }
+
+    .products {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 30px;
+      padding: 40px 20px;
+      max-width: 1200px;
+      margin: 0 auto;
+      animation: fadeInUp 1s ease-out 0.8s forwards;
+    }
+
+    .product {
+      background: #111;
+      border-radius: 20px;
+      padding: 20px;
+      width: calc(25% - 30px);
+      text-align: center;
+      box-shadow: 0 0 25px rgba(255, 0, 0, 0.6);
+      border: 1px solid rgba(255, 0, 0, 0.4);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .product:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 0 40px rgba(255, 0, 0, 0.9);
+    }
+
+    .product img {
+      width: 70px;
+      height: 70px;
+      object-fit: contain;
+      border-radius: 50%;
+      margin-bottom: 15px;
+    }
+
+    .product h3 {
+      font-size: 1.1rem;
+      color: #ff4d4d;
+      margin-bottom: 10px;
+    }
+
+    .product p {
+      font-size: 0.95rem;
+      color: #ccc;
+      margin-bottom: 15px;
+    }
+
+    .buy-button {
+      display: inline-block;
+      background: red;
+      color: black;
+      padding: 10px 25px;
+      border-radius: 30px;
+      text-decoration: none;
+      font-weight: bold;
+      box-shadow: 0 0 15px rgba(255, 0, 0, 0.6);
+      transition: background 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .buy-button:hover {
+      background: #cc0000;
+      box-shadow: 0 0 25px rgba(255, 0, 0, 0.9);
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: scale(0.95); }
+      to { opacity: 1; transform: scale(1); }
+    }
+
+    @keyframes fadeInUp {
+      from { opacity: 0; transform: translateY(30px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    @media (max-width: 1000px) {
+      .product {
+        width: calc(50% - 30px);
+      }
+    }
+
+    @media (max-width: 600px) {
+      .product {
+        width: 100%;
+      }
+    }
+
+    footer {
+      text-align: center;
+      padding: 20px;
+      color: #777;
+      font-size: 0.9rem;
+      border-top: 1px solid #333;
+      margin-top: 40px;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="logo-container">
+    <img src="es.png" alt="Logo" class="logo" />
+  </div>
+
+  <section class="products">
+    <div class="product">
+      <img src="saw.png" alt="Produkt 1" />
+      <h3>Produkt 1 – 20zł</h3>
+      <p>Opis 1</p>
+      <a href="#" class="buy-button">Zakup</a>
+    </div>
+
+    <div class="product">
+      <img src="hbo.png" alt="Produkt 2" />
+      <h3>Produkt 2 – 20zł</h3>
+      <p>Opis 2</p>
+      <a href="#" class="buy-button">Zakup</a>
+    </div>
+
+    <div class="product">
+      <img src="rs.png" alt="Produkt 3" />
+      <h3>Produkt 3 – 20zł</h3>
+      <p>Opis 3</p>
+      <a href="#" class="buy-button">Zakup</a>
+    </div>
+
+    <div class="product">
+      <img src="rsa.png" alt="Produkt 4" />
+      <h3>Produkt 4 – 20zł</h3>
+      <p>Opis 4</p>
+      <a href="#" class="buy-button">Zakup</a>
+    </div>
+
+    <div class="product">
+      <img src="spot.png" alt="Produkt 5" />
+      <h3>Produkt 5 – 20zł</h3>
+      <p>Opis 5</p>
+      <a href="#" class="buy-button">Zakup</a>
+    </div>
+
+    <div class="product">
+      <img src="yt.png" alt="Produkt 6" />
+      <h3>Produkt 6 – 20zł</h3>
+      <p>Opis 6</p>
+      <a href="#" class="buy-button">Zakup</a>
+    </div>
+
+    <div class="product">
+      <img src="ting.png" alt="Produkt 7" />
+      <h3>Produkt 7 – 20zł</h3>
+      <p>Opis 7</p>
+      <a href="#" class="buy-button">Zakup</a>
+    </div>
+
+    <div class="product">
+      <img src="example8.png" alt="Produkt 8" />
+      <h3>Produkt 8 – 20zł</h3>
+      <p>Opis 8</p>
+      <a href="#" class="buy-button">Zakup</a>
+    </div>
+  </section>
+
+  <footer>
+    © 2025 Sklep Neonowy – Wszelkie prawa zastrzeżone.
+  </footer>
+
+</body>
+</html>
